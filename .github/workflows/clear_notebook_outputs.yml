@@ -33,4 +33,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         git commit -m "Clear notebook outputs" || echo "No changes to commit"
+        echo ${{ secrets.ACCESS_TOKEN }}
         git push https://${{ secrets.ACCESS_TOKEN }}@github.com/Dizga/gh-actions.git
