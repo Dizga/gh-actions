@@ -33,7 +33,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         git commit -m "Clear notebook outputs" || echo "No changes to commit"
-        git remote set-url --push origin https://$GITHUB_TOKEN@github.com/Dizga/gh-actions.git
-        git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
